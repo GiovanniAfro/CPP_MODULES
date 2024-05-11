@@ -1,0 +1,109 @@
+reserve nel contesto dei vettori C++:
+
+La funzione reserve in C++ è un metodo disponibile per i vettori della Standard Template Library (STL).
+Essa è utilizzata per impostare la capacità di un vettore senza effettuare l'inserimento effettivo di elementi.
+Capacità di un vettore:
+
+Un vettore in C++ ha sia una size che una capacity.
+La size rappresenta il numero di elementi effettivamente presenti nel vettore.
+La capacity rappresenta quanti elementi il vettore può contenere senza dover effettuare una reallocazione di memoria.
+Uso di reserve:
+
+Chiamando _numbers.reserve(_N), si imposta la capacità del vettore _numbers a _N.
+Questo è utile quando si prevede che il vettore avrà bisogno di ospitare un numero specifico di elementi.
+Impostando la capacità preventivamente, si può evitare una reallocazione di memoria quando si aggiungono elementi successivamente, migliorando le prestazioni.
+Evitare reallocazioni:
+
+Quando si aggiungono elementi a un vettore, la sua capacità può crescere dinamicamente.
+Se la capacità attuale è insufficiente, il vettore può dover essere riallocato in una posizione di memoria più grande, e gli elementi possono essere copiati dalla vecchia alla nuova posizione.
+Utilizzando reserve, si cerca di prevenire questa reallocazione anticipando il numero massimo di elementi che il vettore potrebbe dover ospitare.
+
+Certamente, posso spiegarti ciascun passaggio.
+
+### Creazione di un vettore ordinato:
+
+```cpp
+std::vector<int> sortedNumbers = numbers;
+std::sort(sortedNumbers.begin(), sortedNumbers.end());
+```
+
+1. **`std::vector<int> sortedNumbers = numbers;`:**
+   - Viene creata una copia del vettore `numbers` chiamata `sortedNumbers`.
+
+2. **`std::sort(sortedNumbers.begin(), sortedNumbers.end());`:**
+   - Viene utilizzata la funzione `std::sort` per ordinare il vettore `sortedNumbers` in ordine crescente.
+   - La funzione `sort` richiede l'intervallo `[begin, end)` da ordinare.
+
+### Trovare la differenza minima tra numeri consecutivi:
+
+```cpp
+int minSpan = std::numeric_limits<int>::max();
+for (size_t i = 1; i < sortedNumbers.size(); ++i)
+{
+    int span = sortedNumbers[i] - sortedNumbers[i - 1];
+    if (span < minSpan)
+    {
+        minSpan = span;
+    }
+}
+```
+
+3. **`std::numeric_limits<int>::max()`:**
+   - `std::numeric_limits<int>::max()` restituisce il valore massimo rappresentabile per il tipo `int`. In altre parole, è il valore massimo che un oggetto di tipo `int` può contenere.
+   - In questo contesto, viene utilizzato per inizializzare la variabile `minSpan` con un valore iniziale molto grande, in modo che il primo valore della differenza (span) sarà sicuramente minore.
+
+4. **Ciclo for:**
+   - Il ciclo for attraversa il vettore ordinato `sortedNumbers` a partire dal secondo elemento (`i = 1`) fino all'ultimo elemento (`sortedNumbers.size() - 1`).
+   - Per ogni coppia di numeri consecutivi, viene calcolata la differenza (`span`) tra di essi.
+   - Se la differenza `span` è minore di `minSpan`, viene aggiornato il valore di `minSpan` con la nuova differenza.
+
+In sintesi, questo blocco di codice cerca la differenza minima tra due numeri consecutivi nel vettore `sortedNumbers` dopo averlo ordinato. Alla fine del ciclo, `minSpan` conterrà la differenza più piccola trovata tra due numeri consecutivi. Questa è una strategia per trovare la "distanza" minima tra i numeri nel vettore ordinato.
+
+
+Certamente, ecco un riassunto specifico delle spiegazioni e chiarimenti richiesti per ciascun pezzo di codice:
+
+### Esercizio 00 - Easy Find:
+
+1. **Implementazione di easyfind:**
+   - Creazione di una funzione template `easyfind` che cerca la prima occorrenza di un valore in un container.
+   - Utilizzo di `std::find` dalla libreria standard C++ per effettuare la ricerca.
+   - Controlli implementati per gestire casi in cui il valore non è trovato.
+
+2. **Utilizzo di `typename` e iterator:**
+   - L'utilizzo di `typename` prima di `T::iterator` specifica che `iterator` è un tipo dipendente da un template.
+   - `container.begin()` e `container.end()` restituiscono rispettivamente gli iteratori che rappresentano l'inizio e la fine del container.
+   - `std::find(container.begin(), container.end(), value)` ricerca il valore all'interno del range specificato.
+
+3. **Utilizzo di `auto` per la dichiarazione delle variabili:**
+   - `auto` è una caratteristica di C++11, ma se necessario rispettare C++98, è possibile sostituire `auto` con una dichiarazione di tipo esplicita.
+
+### Esercizio 01 - Span:
+
+1. **Implementazione di `std::minmax_element`:**
+   - Utilizzo di `std::minmax_element` per ottenere una coppia di iteratori che puntano al più piccolo e al più grande elemento del container.
+   - Restituisce una coppia di iteratori del tipo `std::pair<std::vector<int>::iterator, std::vector<int>::iterator>`.
+
+2. **Gestione delle eccezioni:**
+   - Lancio di eccezioni quando non ci sono abbastanza numeri per calcolare uno span o se si tenta di aggiungere più numeri rispetto alla capacità massima del `Span`.
+
+3. **Utilizzo di `std::numeric_limits<int>::max()`:**
+   - `std::numeric_limits<int>::max()` restituisce il valore massimo rappresentabile per il tipo `int`.
+
+4. **Copia ordinata di un vettore e ricerca dello span più piccolo:**
+   - Creazione di una copia ordinata del vettore di numeri.
+   - Calcolo dello span più piccolo attraverso l'iterazione sulla versione ordinata del vettore.
+
+### Riassunto generale:
+
+- **Template e iteratori:**
+  - Utilizzo di template per generare funzioni e classi generiche.
+  - Utilizzo di iteratori per scorrere attraverso i container.
+
+- **STL Algorithms:**
+  - Utilizzo di funzioni della Standard Template Library (STL) come `std::find`, `std::sort`, e `std::minmax_element` per semplificare le operazioni.
+
+- **Gestione delle eccezioni:**
+  - Utilizzo di eccezioni per gestire situazioni eccezionali durante l'esecuzione del programma.
+
+- **Versione C++98:**
+  - Sostituzione di caratteristiche specifiche di C++11 con equivalenti compatibili con C++98 quando necessario.
