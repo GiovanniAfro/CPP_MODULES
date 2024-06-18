@@ -52,7 +52,7 @@ Further explores STL containers and algorithms, focusing on real-world applicati
 
 Culminates the series with complex projects that integrate multiple STL components to solve sophisticated programming challenges.
 
-## Usage
+## Usage 
 
 To get started with the modules:
 
