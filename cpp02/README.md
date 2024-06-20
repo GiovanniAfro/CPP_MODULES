@@ -52,4 +52,4 @@ Using the fixed-point number class, you will create a `Point` class and implemen
 
 Make sure your submitted code is clean, well-commented, and adheres to the naming and formatting conventions specified in the module documentation. Remember that your code will be evaluated not just for functionality but also for readability and adherence to best practices.
 
-**Challenge yourself, learn consistently, and strive to write code that not only works but is also easy to read and maintain!**
+**Challenge yourself, learn consistently, and strive to write code that not only works but is also easy to read and maintain!** 
