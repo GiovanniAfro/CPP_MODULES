@@ -49,4 +49,4 @@ Ensure your code is robust, adheres to the specified standards, and demonstrates
 
 **Enhance your C++ skills by mastering these advanced concepts, essential for writing sophisticated, safe, and efficient software.**
 
-### Good luck!
+### Good luck!:D
