@@ -20,7 +20,7 @@ Each module in this repository focuses on specific topics as outlined below:
 
 Introduces the syntax, data types, and basic control structures of C++. It lays the groundwork for understanding more complex C++ features.
 
-### Module 02 - Functions and Memory
+### Module 02 - Functions and Memory 
 
 Explores function usage, memory management, and pointer manipulation, which are crucial for effective C++ programming.
 
