@@ -5,7 +5,7 @@
 This repository houses a series of educational modules designed to teach C++ through a structured curriculum. Each module focuses on different aspects of the C++ programming language, from basic syntax and control structures to advanced topics such as object-oriented programming, templates, and the Standard Template Library (STL). The goal is to provide learners with a deep understanding of C++ and its applications in software development.
 
 ## Educational Objectives
-
+ 
 - **Foundational C++ Skills**: Understand C++ syntax and fundamental programming concepts.
 - **Object-Oriented Programming (OOP)**: Learn the principles of OOP to design modular and scalable software.
 - **Advanced C++ Features**: Explore advanced features such as templates, exceptions, and the STL to write efficient and powerful C++ applications.
