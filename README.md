@@ -17,7 +17,7 @@ This repository houses a series of educational modules designed to teach C++ thr
 Each module in this repository focuses on specific topics as outlined below:
 
 ### Module 01 - Basics of C++
-
+ 
 Introduces the syntax, data types, and basic control structures of C++. It lays the groundwork for understanding more complex C++ features.
 
 ### Module 02 - Functions and Memory 
